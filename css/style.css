@@ -1,0 +1,99 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: "Lexend Deca", sans-serif;
+ }
+ :root {
+    --Verydarkblue: hsl(233, 47%, 7%);
+    --Darkdesaturatedblue : hsl(244, 38%, 16%);
+    --Softviolet : hsl(277, 64%, 61%);
+    --White: hsl(0, 0%, 100%);
+    --Slightlytransparentwhite: hsla(0, 0%, 100%, 0.75);
+    --Slightlytransparentwhite: hsla(0, 0%, 100%, 0.6);
+ }
+ .design {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--Verydarkblue);
+ }
+ .design .box {
+   background-color: var(--Darkdesaturatedblue);
+   border-radius: 10px;
+   color: white;
+   overflow: hidden;
+   display: flex; 
+   align-items: center;
+   position: relative;
+ }
+ .design .box .desc {
+   padding: 5em;
+   flex-basis: 50%;
+ }
+ .design .box .desc h1 {
+   font-size: 35px;
+ }
+ .design .box .desc h1 span {
+   font-size: 35px;
+   color: var(--Softviolet);
+ }
+ .design .box .desc p {
+   color: var(--Slightlytransparentwhite);
+   line-height: 1.7;
+ }
+ .design .box .stats {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 4em;
+ }
+ .design .box .stats .info {
+   text-transform: uppercase;
+ }
+ .design .box .stats .info span {
+   font-weight: bold;
+    font-size: 25px;
+    display: block;
+    margin-bottom: 10px;
+ }
+ .design .box .image {
+   width: 50%;
+   height: 50vh;
+   background: linear-gradient(
+       0deg,
+       hsla(277, 64%, 61%, 0.5) 0%,
+       hsla(277, 64%, 61%, 0.5) 100%
+     ),
+     url(../img/image-header-desktop.jpg) center no-repeat;
+   background-size: cover;
+ }
+ @media (max-width:767px) {
+   .design .box {
+      flex-direction: column-reverse;
+      margin: 15px 20px;
+   }
+   .design .box .desc {
+      text-align: center;
+      margin: -35px;
+   }
+   .design .box .stats {
+      flex-direction: column;
+      margin-bottom: 15px;
+   }
+   .design .box .image {
+      width: 100%;
+      height: 25vh;
+      background: linear-gradient(
+          0deg,
+          hsla(277, 64%, 61%, 0.5) 0%,
+          hsla(277, 64%, 61%, 0.5) 100%
+        ),
+        url(../img/image-header-mobile.jpg) center no-repeat;
+      background-size: cover;
+      border-radius: 10px;
+    }
+ }
